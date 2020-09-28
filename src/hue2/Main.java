@@ -17,7 +17,20 @@ public class Main {
         NumberTester nt = new NumberTester("numbers.txt");
 
         nt.setOddEvenTester((n) -> n % 2 == 0);
+        nt.setPrimeTester((n) -> {
+            if (n == 2) {
+                return true;
+            }
+
+            for (int i = 2; i < n; i++) {
+
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        });
         nt.setPalindromeTester();
-        nt.setPrimeTester();
+
     }
 }
