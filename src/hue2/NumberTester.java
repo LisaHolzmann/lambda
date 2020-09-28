@@ -9,9 +9,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,19 +23,18 @@ public class NumberTester {
 
     private String fileName;
     private int testfaelle;
-    private Map<Integer, Integer> zahlen = new HashMap<>();
+    private List<Integer[]> zahlen = new ArrayList<>();
 
     public NumberTester(String fileName) {
         this.fileName = fileName;
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File(fileName)));
             String line = br.readLine();
-            this.testfaelle = Integer.parseInt(line);
+            testfaelle = Integer.parseInt(line);
             line = br.readLine();
             while (line != null) {
                 String[] splitted = line.split(" ");
-                zahlen.put(Integer.parseInt(splitted[1]), Integer.parseInt(splitted[0]));
-
+                zahlen.add(new Integer[]{Integer.parseInt(splitted[0]), Integer.parseInt(splitted[1])});
                 line = br.readLine();
             }
             br.close();
