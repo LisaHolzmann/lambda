@@ -49,5 +49,6 @@ public class Main {
             return true;
         });
 
+        nt.testFile();
     }
 }
