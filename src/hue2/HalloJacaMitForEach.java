@@ -12,6 +12,7 @@ import java.util.List;
  *
  * @author holzm
  */
+//2.Beispiel
 public class HalloJacaMitForEach {
 
     public static List<String> list = new ArrayList<>();
