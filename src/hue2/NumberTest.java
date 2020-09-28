@@ -9,13 +9,7 @@ package hue2;
  *
  * @author holzm
  */
-public class Hue2 {
+public interface NumberTest {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
-    }
-
+    boolean testNumber(int number);
 }
