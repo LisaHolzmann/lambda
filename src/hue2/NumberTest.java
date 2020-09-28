@@ -9,6 +9,7 @@ package hue2;
  *
  * @author holzm
  */
+//3.Beispiel
 public interface NumberTest {
 
     boolean testNumber(int number);
