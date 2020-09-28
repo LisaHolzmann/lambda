@@ -16,8 +16,8 @@ public class Main {
 
         NumberTester nt = new NumberTester("numbers.txt");
 
-        nt.setOddEvenTester(oddTester);
-        nt.setPalindromeTester(palindromeTester);
-        nt.setPrimeTester(primeTester);
+        nt.setOddEvenTester((n) -> n % 2 == 0);
+        nt.setPalindromeTester();
+        nt.setPrimeTester();
     }
 }
