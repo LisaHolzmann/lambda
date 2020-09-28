@@ -18,6 +18,9 @@ public class Main {
 
         nt.setOddEvenTester((n) -> n % 2 == 0);
         nt.setPrimeTester((n) -> {
+            if (n <= 1) {
+                return false;
+            }
             if (n == 2) {
                 return true;
             }
