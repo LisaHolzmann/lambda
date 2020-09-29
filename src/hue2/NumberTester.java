@@ -62,5 +62,37 @@ public class NumberTester {
     }
 
     public void testFile() {
+        for (int i = 0; i < zahlen.size(); i++) {
+            Integer[] get = zahlen.get(i);
+
+            switch (get[0]) {
+                case 1:
+                    boolean ergebnis = oddTester.testNumber(i);
+                    if (ergebnis == true) {
+                        System.out.println("ODD");
+                    } else {
+                        System.out.println("EVEN");
+                    }
+
+                case 2:
+                    boolean ergebnis2 = primeTester.testNumber(i);
+                    if (ergebnis2 == true) {
+                        System.out.println("PRIME");
+                    } else {
+                        System.out.println("NO PRIME");
+                    }
+
+                case 3:
+                    boolean ergebnis3 = palindromeTester.testNumber(i);
+                    if (ergebnis3 == true) {
+                        System.out.println("PALINDROME");
+                    } else {
+                        System.out.println("NO PALINDROME");
+                    }
+
+            }
+
+        }
     }
+
 }
