@@ -67,29 +67,37 @@ public class NumberTester {
 
             switch (get[0]) {
                 case 1:
-                    boolean ergebnis = oddTester.testNumber(i);
-                    if (ergebnis == true) {
-                        System.out.println("ODD");
-                    } else {
+
+                    boolean ergebnis = oddTester.testNumber(get[1]);
+                    if (ergebnis) {
                         System.out.println("EVEN");
+                    } else {
+                        System.out.println("ODD");
                     }
+                    break;
 
                 case 2:
-                    boolean ergebnis2 = primeTester.testNumber(i);
-                    if (ergebnis2 == true) {
+
+                    boolean ergebnis2 = primeTester.testNumber(get[1]);
+                    if (ergebnis2) {
                         System.out.println("PRIME");
                     } else {
                         System.out.println("NO PRIME");
                     }
+                    break;
 
                 case 3:
-                    boolean ergebnis3 = palindromeTester.testNumber(i);
-                    if (ergebnis3 == true) {
+
+                    boolean ergebnis3 = palindromeTester.testNumber(get[1]);
+                    if (ergebnis3) {
                         System.out.println("PALINDROME");
                     } else {
                         System.out.println("NO PALINDROME");
                     }
+                    break;
 
+                default:
+                    break;
             }
 
         }
