@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hue2;
+package hue2.bsp3;
 
 /**
  *
  * @author holzm
  */
-public interface CalculationOperation {
+//3.Beispiel
+public interface NumberTest {
 
-    Number calc(Number x, Number y);
-
+    boolean testNumber(int number);
 }

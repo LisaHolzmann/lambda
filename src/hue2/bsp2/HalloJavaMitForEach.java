@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hue2;
+package hue2.bsp2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
  * @author holzm
  */
 //2.Beispiel
-public class HalloJacaMitForEach {
+public class HalloJavaMitForEach {
 
     public static List<String> list = new ArrayList<>();
 

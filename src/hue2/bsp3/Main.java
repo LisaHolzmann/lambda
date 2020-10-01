@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hue2;
+package hue2.bsp3;
 
 /**
  *
@@ -35,13 +35,12 @@ public class Main {
         });
         nt.setPalindromeTester((n) -> {
             String text = Integer.toString(n);
-            String clean = text.replaceAll("\\s+", "").toLowerCase();
-            int length = clean.length();
+            int length = text.length();
             int forward = 0;
             int backward = length - 1;
             while (backward > forward) {
-                char forwardChar = clean.charAt(forward++);
-                char backwardChar = clean.charAt(backward--);
+                char forwardChar = text.charAt(forward++);
+                char backwardChar = text.charAt(backward--);
                 if (forwardChar != backwardChar) {
                     return false;
                 }
