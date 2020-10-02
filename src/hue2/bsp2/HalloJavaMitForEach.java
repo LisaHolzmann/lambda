@@ -20,10 +20,11 @@ public class HalloJavaMitForEach {
     public static void main(String[] args) {
 
         list.add("Hallo");
+        list.add("Java");
         for (String s : list) {
             System.out.println(s);
         }
 
-        list.forEach(System.out::print);
+        list.forEach(System.out::println);
     }
 }
