@@ -97,9 +97,10 @@ public class Main2 {
             number.setA(x);
             number.setB(y);
             return number;
-        }, (a, b) -> {
-            double x = a.getA() + a.getB();
-            double y = b.getA() + b.getB();
+        }, (a, b) -> { //Internet hods ma zagt
+            double nenner = b.getA() * b.getA() + b.getB() + b.getB();
+            double x = (a.getA() * b.getA() + a.getB() * b.getB()) / nenner;
+            double y = (a.getB() * b.getA() - a.getA() * b.getB()) / nenner;
             Number number = new Number();
             number.setA(x);
             number.setB(y);
@@ -111,22 +112,30 @@ public class Main2 {
 
         while (ausw < 4) {
 
-            System.out.print("Nummer eigeben x a: \n");
-            int xa = Integer.parseInt(scanner.nextLine());
-            System.out.print("Nummer eingeben x b: \n");
-            int xb = Integer.parseInt(scanner.nextLine());
-            System.out.print("Nummer eingeben y a: \n");
-            int ya = Integer.parseInt(scanner.nextLine());
-            System.out.print("Nummer eingeben y b: \n");
-            int yb = Integer.parseInt(scanner.nextLine());
+            int operation;
+            int xa;
+            int xb;
+            int ya;
+            int yb;
+            do {
+                System.out.print("Nummer eigeben x a: \n");
+                xa = Integer.parseInt(scanner.nextLine());
+                System.out.print("Nummer eingeben x b: \n");
+                xb = Integer.parseInt(scanner.nextLine());
+                System.out.print("Nummer eingeben y a: \n");
+                ya = Integer.parseInt(scanner.nextLine());
+                System.out.print("Nummer eingeben y b: \n");
+                yb = Integer.parseInt(scanner.nextLine());
 
-            System.out.println("Choose operation:");
-            System.out.println("1.. add");
-            System.out.println("2.. subtract");
-            System.out.println("3.. multiply");
-            System.out.println("4.. divide");
-            ;
-            int operation = Integer.parseInt(scanner.nextLine());
+                System.out.println("Choose operation:");
+                System.out.println("1.. add");
+                System.out.println("2.. subtract");
+                System.out.println("3.. multiply");
+                System.out.println("4.. divide");
+                System.out.println("5.. ahm, enter numbers, agän");
+
+                operation = Integer.parseInt(scanner.nextLine());
+            } while (operation == 5); //Wenn da user 5 auswöhd, daun gehts numoi
             Number number1 = new Number();
             number1.setA(xa);
             number1.setB(xb);
@@ -179,7 +188,6 @@ public class Main2 {
 
                             break;
                     }
-                    ;
                     break;
                 case 3:
                     switch (operation) {
@@ -203,7 +211,6 @@ public class Main2 {
 
                             break;
                     }
-                    ;
                     break;
                 case 4:
                     System.exit(0);
